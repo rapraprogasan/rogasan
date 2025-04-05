@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Adventure</title>
+    <link rel="stylesheet" href="css/game5.css">
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <h1>Treasure Hunt Adventure</h1>
+        <button id="start-btn" class="btn">Start Adventure</button>
+        <button id="settings-btn" class="btn">Settings</button>
+        <button id="credits-btn" class="btn">Credits</button>
+    </div>
+
+    <div id="settings-screen" class="screen hidden">
+        <h2>Settings</h2>
+        <div class="setting-item">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+        <div class="setting-item">
+            <label for="controls">Controls:</label>
+            <select id="controls">
+                <option value="arrows">Arrow Keys</option>
+                <option value="wasd">WASD</option>
+                <option value="touch">Touch Controls</option>
+            </select>
+        </div>
+        <button id="back-btn" class="btn">Back to Menu</button>
+    </div>
+
+    <div id="credits-screen" class="screen hidden">
+        <h2>Credits</h2>
+        <p>Created by: <strong>Mark Joseph Tabugon Rogasan</strong></p>
+        <p>References:</p>
+        <ul>
+            <li>YouTube tutorials</li>
+            <li>Google resources</li>
+            <li>Stack Overflow</li>
+        </ul>
+        <button id="credits-back-btn" class="btn">Back to Menu</button>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+        <div id="game-ui">
+            <div id="level-display">Level: <span id="level">1</span></div>
+            <div id="lives-display">Lives: <span id="lives">3</span></div>
+            <div id="score-display">Score: <span id="score">0</span></div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="mobile-controls" class="hidden">
+            <div class="d-pad">
+                <button class="control-btn up">↑</button>
+                <button class="control-btn left">←</button>
+                <button class="control-btn down">↓</button>
+                <button class="control-btn right">→</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-screen" class="screen hidden">
+        <h2>Game Over</h2>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <p>Level Reached: <span id="final-level">1</span></p>
+        <button id="restart-btn" class="btn">Play Again</button>
+        <button id="menu-btn" class="btn">Main Menu</button>
+    </div>
+
+    <div id="level-complete-screen" class="screen hidden">
+        <h2>Level Complete!</h2>
+        <p>Score: <span id="level-score">0</span></p>
+        <p>Treasures Found: <span id="treasures-found">0</span></p>
+        <button id="next-level-btn" class="btn">Next Level</button>
+    </div>
+    <!-- Sound elements -->
+<audio id="bgMusic" loop>
+    <source src="sounds/treasurebg.mp3" type="audio/mpeg">
+</audio>
+<audio id="treasureSound">
+    <source src="sounds/coin.mp3" type="audio/mpeg">
+</audio>
+<audio id="bombSound">
+    <source src="sounds/explosiontt.mp3" type="audio/mpeg">
+</audio>
+<audio id="gameOverSound">
+    <source src="sounds/gameover.mp3" type="audio/mpeg">
+</audio>
+<audio id="levelCompleteSound">
+    <source src="sounds/levelup.mp3" type="audio/mpeg">
+</audio>
+<audio id="clickSound">
+    <source src="sounds/click.mp3" type="audio/mpeg">
+</audio>
+<!-- Leaderboard Screen -->
+<div id="leaderboard-screen" class="screen hidden">
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+    <button id="leaderboard-back-btn" class="btn">Back to Menu</button>
+</div>
+    <script src="js/game5.js"></script>
+</body>
+</html>

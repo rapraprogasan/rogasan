@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jumper Man - Endless Runner</title>
+    <link rel="stylesheet" href="css/game3.css">
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+</head>
+<body>
+    <div class="game-container">
+        <div class="start-screen" id="startScreen">
+            <h1>Jumper Man</h1>
+            <div class="character-preview"></div>
+            <div class="controls">
+                <p>Tap or click to jump over obstacles!</p>
+            </div>
+            <div class="options">
+                <label class="music-toggle">
+                    Music: 
+                    <button id="musicToggle">ON</button>
+                </label>
+            </div>
+            <button class="start-btn" id="startBtn">START</button>
+            <div class="credits">
+                <p>Created by: Mark Joseph Tabugon Rogasan</p>
+                <p>References: YouTube, Google</p>
+            </div>
+        </div>
+        
+        <div class="game-screen" id="gameScreen">
+            <div class="score-display">
+                <span>Score: <span id="score">0</span></span>
+                <span>Coins: <span id="coins">0</span></span>
+            </div>
+            <div class="game-area">
+                <div class="character" id="character"></div>
+                <div class="obstacle" id="obstacle"></div>
+                <div class="coin" id="coin"></div>
+                <div class="ground"></div>
+            </div>
+        </div>
+        
+        <div class="game-over-screen" id="gameOverScreen">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>Coins Collected: <span id="finalCoins">0</span></p>
+            <button class="restart-btn" id="restartBtn">Play Again</button>
+        </div>
+    </div>
+
+    <audio id="jumpSound" src="sounds/powerup.mp3" preload="auto"></audio>
+    <audio id="coinSound" src="sounds/collect.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="sounds/explosion.mp3" preload="auto"></audio>
+    <audio id="backgroundMusic" src="sounds/jumpmusic.mp3" preload="auto" loop></audio>
+    <script src="js/game3.js"></script>
+</body>
+</html>

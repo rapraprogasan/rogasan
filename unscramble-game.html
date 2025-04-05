@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <link rel="stylesheet" href="css/game6.css">
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div class="screen start-screen active">
+            <h1>Word Scramble</h1>
+            <div class="btn-group">
+                <button class="btn start-btn">Start Game</button>
+                <button class="btn settings-btn">Settings</button>
+                <button class="btn credits-btn">Credits</button>
+            </div>
+        </div>
+
+        <!-- Settings Screen -->
+        <div class="screen settings-screen">
+            <h2>Settings</h2>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="volume">Music Volume</label>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+                <div class="setting-item">
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn back-btn">Back to Menu</button>
+        </div>
+
+        <!-- Credits Screen -->
+        <div class="screen credits-screen">
+            <h2>Credits</h2>
+            <div class="credits-content">
+                <p>Created by: <strong>Mark Joseph Tabugon Rogasan</strong></p>
+                <p>References:</p>
+                <ul>
+                    <li>YouTube tutorials</li>
+                    <li>Google resources</li>
+                    <li>Stack Overflow</li>
+                </ul>
+                <p>Special thanks to all open source contributors!</p>
+            </div>
+            <button class="btn back-btn">Back to Menu</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="screen game-screen">
+            <div class="game-header">
+                <div class="level-display">Level: <span id="level">1</span>/10</div>
+                <div class="time-display">Time: <span id="time">60</span>s</div>
+                <div class="score-display">Score: <span id="score">0</span></div>
+            </div>
+            <div class="game-content">
+                <div class="scramble-word" id="scramble-word"></div>
+                <input type="text" id="user-input" placeholder="Type your answer here...">
+                <div class="btn-group">
+                    <button class="btn hint-btn">Hint</button>
+                    <button class="btn submit-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="screen gameover-screen">
+            <h2>Game Over!</h2>
+            <div class="gameover-content">
+                <p>Your final score: <span id="final-score">0</span></p>
+                <p>Level reached: <span id="final-level">1</span></p>
+            </div>
+            <div class="btn-group">
+                <button class="btn restart-btn">Play Again</button>
+                <button class="btn menu-btn">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Congratulations Screen -->
+        <div class="screen congrats-screen">
+            <h2>Congratulations!</h2>
+            <div class="congrats-content">
+                <p>You completed all 10 levels!</p>
+                <p>Final score: <span id="congrats-score">0</span></p>
+            </div>
+            <div class="btn-group">
+                <button class="btn restart-btn">Play Again</button>
+                <button class="btn menu-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="sounds/scramblebg.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correct-sound">
+        <source src="sounds/correctscramble.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong-sound">
+        <source src="sounds/scramblewrong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="gameover-sound">
+        <source src="sounds/gameover2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/game6.js"></script>
+</body>
+</html>

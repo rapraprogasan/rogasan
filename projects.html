@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Projects - Mark Joseph Rogasan</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+</head>
+<body>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Back to Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="projects">
+        <h2>More Projects</h2>
+        <div class="media-container">
+            <section id="project">
+                <h3>Project Description: BuddyBuy – Static E-Commerce Website</h3>
+                <p>Project Name: BuddyBuy</p>
+                <p>Type: Static Website</p>
+                <p>Category: E-Commerce</p>
+                <p><h3>Purpose</h3> This is our first project in Human-Computer Interaction (HCI) 
+                    during our first year. It is a simple static online shopping website designed 
+                    to showcase basic web development skills using only HTML, CSS, and JavaScript.</p>
+                <p><h3>Features</h3>
+            
+                    Homepage: A welcoming page with an introduction to BuddyBuy and a navigation menu.
+                    
+                    Product Listings: Displays featured and latest products with images, descriptions, ratings, and prices.
+                    
+                    Navigation Menu: Links to Home, Products, About, Contact, and Account pages.
+                    
+                    Shopping Cart Icon: A simple cart icon linking to a cart page (non-functional, only for display).
+                    
+                    Testimonials: Customer reviews with star ratings.
+                    
+                    Brands Section: Logos of partner brands.
+                    
+                    Footer: Contains social media links, company information, and useful links.
+                    
+                    Basic JavaScript: Includes a menu toggle script for mobile responsiveness.</p>
+                <p>Technology Stack:
+            
+                    Frontend: HTML, CSS, JavaScript
+                    
+                    Backend: None (Static website, no database or server-side functionalities)
+                    
+                    This project serves as a foundational exercise in web development and user experience design, focusing on structuring and styling an e-commerce interface without dynamic functionalities.
+                    </p>
+               </section>
+            <video controls>
+                <source src="video/Buddybuyy.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <section id="gallery">
+                <h2>Project Gallery</h2>
+                <div class="gallery-container">
+                    <img src="picture/image1.jpg" alt="Project Image 1">
+                    <img src="picture/image2.jpg" alt="Project Image 2">
+                    <img src="picture/image3.jpg" alt="Project Image 3">
+                    <img src="picture/image4.jpg" alt="Project Image 4">
+                    <img src="picture/image5.jpg" alt="Project Image 5">
+                    <img src="picture/image6.jpg" alt="Project Image 6">
+                </div>
+            </section>
+            
+    </section>
+    <!-- Lightbox for Fullscreen Image -->
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg" src="" alt="Fullscreen Image">
+</div>
+
+  
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: rapraprogasan@gmail.com</p>
+        <p>
+            <a href="https://www.linkedin.com/in/markjoseph" target="_blank">
+                <img src="picture/linkedin.png" alt="LinkedIn" width="40">
+            </a>
+            <a href="https://www.facebook.com/rapido.rogasan.5" target="_blank">
+                <img src="picture/fblogo.png" alt="Facebook" width="40">
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mark Joseph Tabugon Rogasan. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz Game</title>
+    <link rel="stylesheet" href="css/game4.css">
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Math Quiz</h1>
+            <p>Solve math problems as fast as you can!</p>
+            <button id="start-btn" class="btn">Start Game</button>
+            <button id="settings-btn" class="btn secondary">Settings</button>
+            <button id="credits-btn" class="btn secondary">Credits</button>
+        </div>
+
+        <!-- Settings Screen -->
+        <div id="settings-screen" class="screen">
+            <h1>Settings</h1>
+            <div class="settings-option">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="settings-option">
+                <label for="time-limit">Time per question (seconds):</label>
+                <input type="number" id="time-limit" min="5" max="60" value="15">
+            </div>
+            <div class="settings-option">
+                <label for="questions">Number of questions:</label>
+                <input type="number" id="questions" min="5" max="30" value="10">
+            </div>
+            <button id="save-settings" class="btn">Save Settings</button>
+            <button id="back-from-settings" class="btn secondary">Back</button>
+        </div>
+
+        <!-- Credits Screen -->
+        <div id="credits-screen" class="screen">
+            <h1>Credits</h1>
+            <div class="credits-content">
+                <p>Created by: <strong>Mark Joseph Tabugon Rogasan</strong></p>
+                <p>References:</p>
+                <ul>
+                    <li>YouTube tutorials</li>
+                    <li>Google resources</li>
+                    <li>Stack Overflow</li>
+                </ul>
+                <p>Special thanks to all who supported this project!</p>
+            </div>
+            <button id="back-from-credits" class="btn">Back</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="stats">
+                    <span id="score">Score: 0</span>
+                    <span id="timer">Time: 15</span>
+                    <span id="question-count">Question: 1/10</span>
+                </div>
+            </div>
+            <div class="game-content">
+                <div id="question" class="question">3 + 5 = ?</div>
+                <div class="options">
+                    <button class="option-btn">7</button>
+                    <button class="option-btn">8</button>
+                    <button class="option-btn">9</button>
+                    <button class="option-btn">10</button>
+                </div>
+            </div>
+            <div class="feedback"></div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <h1>Quiz Completed!</h1>
+            <div class="results-content">
+                <p>Your score: <span id="final-score">0</span>/<span id="total-questions">10</span></p>
+                <p>Correct answers: <span id="correct-answers">0</span></p>
+                <p>Wrong answers: <span id="wrong-answers">0</span></p>
+                <p>Time per question: <span id="average-time">0</span>s</p>
+            </div>
+            <button id="play-again" class="btn">Play Again</button>
+            <button id="back-to-menu" class="btn secondary">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="js/game4.js"></script>
+</body>
+</html>

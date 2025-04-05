@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Joseph Tabugon Rogasan - Portfolio</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script.js" defer></script>
+    <link rel="icon" type="image/png" href="picture/rogasan.png">
+</head>
+<body>
+    <header>
+        <div class="cover-photo">
+            <img src="picture/cover.jpg" alt="Cover Photo" onclick="openModal('cover.jpg')">
+        </div>
+        <div class="profile-container">
+            <div class="profile">
+                <img src="picture/profile.jpg" alt="Mark Joseph's Profile Picture" onclick="openModal('profile.jpg')">
+            </div>
+            <div class="profile-info">
+                <h1>Mark Joseph Tabugon Rogasan</h1>
+                <p>Student at PHINMA-Saint Jude College Manila</p>
+                <p>"I am currently learning coding and studying IT networking (Cisco). Passionate about technology and problem-solving."</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate student learning web development and IT networking. I strive to improve my coding skills and develop innovative projects.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="media-container">
+            <img src="picture/image1.jpg" alt="Project Image" class="fullscreen-img">
+            <img src="picture/image2.jpg" alt="Project Image" class="fullscreen-img">
+            <img src="picture/image3.jpg" alt="Project Image" class="fullscreen-img">
+            <img src="picture/image4.jpg" alt="Project Image" class="fullscreen-img">
+        </div>
+    </section>
+    
+    <!-- Lightbox for Fullscreen Image -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightboxImg" src="" alt="Fullscreen Image">
+    </div>    
+    
+    <a href="projects.html" class="see-more-btn">See More Projects</a>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: rapraprogasan@gmail.com</p>
+        <p>
+            <a href="https://www.linkedin.com/in/markjoseph" target="_blank">
+                <img src="picture/linkedin.png" alt="LinkedIn" width="40">
+            </a>
+            <a href="https://www.facebook.com/rapido.rogasan.5" target="_blank">
+                <img src="picture/fblogo.png" alt="Facebook" width="40">
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mark Joseph Tabugon Rogasan. All Rights Reserved.</p>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        }
+    </script>
+    
+</body>
+</html>
